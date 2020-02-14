@@ -1,8 +1,8 @@
-查看命令更多选项：`完整指令 --help`
+**查看命令更多选项：**`完整指令 --help`
 
-查看分支：`git branch`
+**查看分支**：`git branch`
 
-创建分支：`git branch name`
+**创建分支：**`git branch name`
 
 切换分支：`git switch name`
 
@@ -22,7 +22,7 @@
 
 禁用fast forward模式合并：`git merge --no-ff -m "描述" 合并分支名`
 
- 加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并
+ 加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并，因为该模式下删除分支后，会丢掉分支信息
 
 `ls -ah`查看隐藏文件
 
@@ -39,3 +39,19 @@
 **bug分支只用于在本地修复bug**
 
 `git config --global color.ui true`**适当地显示不同的颜色**
+
+`git init 目录名`**把该目录变为git可管理的本地仓库**
+
+`git commit -m "自己备注的信息"`**提交**
+
+`git add -A `***添加全部文件***
+
+`git status`***查看是否还有未提交***
+
+`git push`**提交当前分支到远程仓库（第二次及之后）**
+
+`git remote add origin git@github.com:michaelliao/learngit.git`**需要在本地的learngit目录下进行，与michaelliao账户内的learngit关联**
+
+`git clone git@github.com:michaelliao/gitskills.git`**将michaelliao账户的GitHub内的gitskills仓库克隆到本地**
+
+``****
