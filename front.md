@@ -9,9 +9,11 @@
 
 - 布局：colum，float，flex，position
 
+  绝对，弹性，
+
 +++
 
-> **HTML:***
+> **HTML:**
 
 1. `input`的type属性如下
 
@@ -51,7 +53,11 @@
 
 5. `<link rel="shortcut icon" href="图片路径" />`添加网页logo，且图片文件类型必须为.ico
 
-6. 
+6. 设置边框为圆角`border-radius:25px;`
+
+7. 表格块可横跨的列数`colspan='列数'`
+
+8. 表格块可竖跨的行数`rowspan='行数'`
 
 +++
 
