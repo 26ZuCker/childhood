@@ -38,47 +38,32 @@
 > ***CSS:***
 
 1. 使用外部CSS：`<link type="text/css" rel="styleSheet"  href="路径" />`
-
 2. `word-wrap:break-word;`允许您允许文本强制文本进行换行 - 即使这意味着会对单词进行拆分
-
 3. `text-decoration:none;`去掉链接下划线
-
-4. `a:link` 普通的、未被访问的链接
-
-   `a:visited`  用户已访问的链接
-
-   `a:hover` 鼠标指针位于链接的上方
-
-   `a:active`  链接被点击的时刻
-
+4. 伪类：
+-  `a:link` 普通的、未被访问的链接
+   -  `a:visited`  用户已访问的链接
+-  `a:hover` 鼠标指针位于链接的上方
+   -  `a:active`  链接被点击的时刻
 5. `background-color`规定链接的背景色
-
 6. `<link rel="shortcut icon" href="图片路径" />`添加网页logo，且图片文件类型必须为.ico
-
 7. 设置边框为圆角：`border-radius:25px;`
-
 8. 表格块可横跨的列数：`colspan='列数'`
-
 9. 表格块可竖跨的行数：`rowspan='行数'`
-
 10. 改变鼠标在上方的指针形式:`<标签 style="cursor:形式">`
-
 11. 滚动条设置或隐藏某个坐标轴的:`overflow:scroll`或`overflow-x:hidden`
-
-12. 自己拖动框大小：`resize:both;overflow:auto`
-
-13. 不可见：
+12. 隐藏超出框的内容`overflow:hidden`
+13. 自己拖动框大小：`resize:both;overflow:auto`
+14. 不可见：
 
     - 隐藏但不占空间：`display="none"`
     - 隐藏但仍占空间：`visibility="hidden"`
     - 透明程度：`opacity:程度数字`
-
-14. 字体：
+15. 字体：
 
     -   粗细：`font-width`
-    - 大小：`font-size:%`
-
-15. 
+    - 大小：`font-size:%` 
+16. 
 
 +++
 
@@ -117,7 +102,9 @@
       
       2. `新字符串=数组.join('分隔符')`结合数组内元素为一个字符串
       
-      3. 
+      3. `splice()`
+      
+      4. `slice()`
    7. 随机数：`Math.floor(Math.random()*(最大-最小))+最小`返回不包括区间，包括需要`最小+1`
    8. 
 
