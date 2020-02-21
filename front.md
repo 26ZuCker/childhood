@@ -42,7 +42,9 @@
 
 1. 使用外部CSS：`<link type="text/css" rel="styleSheet"  href="路径" />`
 
-2. 过渡和动画区别：
+2. `@-webkit-keyframes`用Chrome要加上
+
+3. 过渡和动画区别：
 
    - 过渡需要事件才能触发（点击可加上onclick并在JS内加上样式，用setTimeout函数），动画除非JS绑定，否则只能一开始就触发（写好动画，但不在需要动画的元素上绑定animation属性，事件触发的时候绑上，事件结束后再删除掉，下次点击就能重新绑上，重现动画效果）
 
@@ -55,7 +57,7 @@
      }
      ```
 
-   - **点击触发动画：**
+   - **点击触发动画：**设置element.style.animationPlayState
 
      ```javascript
      <style>
@@ -95,7 +97,7 @@
 
    - 过渡只有一组（开始-结束），动画则多组，相当于多个过渡
 
-3. `box-sizing:模式`：
+4. `box-sizing:模式`：
 
    -   由于直接设置高和宽，元素块盒子模型实际不为该尺寸，而进行，设置的高和宽即为实际所占空间
 
@@ -103,24 +105,24 @@
 
      `border-box`为元素设定的宽度和高度决定了元素的边框盒（常用）
 
-4. `word-wrap:break-word;`允许您允许文本强制文本进行换行 - 即使这意味着会对单词进行拆分
+5. `word-wrap:break-word;`允许您允许文本强制文本进行换行 - 即使这意味着会对单词进行拆分
 
-5. `text-decoration:none;`去掉链接下划线
+6. `text-decoration:none;`去掉链接下划线
 
-6. 伪类（用于设置什么时候显示该样式，比如动画，过渡）：
+7. 伪类（用于设置什么时候显示该样式，比如动画，过渡）：
 
    - `:hover`
    - `:active`
    - `:link`
    - `:visiter`
 
-7. `background-color`规定链接的背景色
+8. `background-color`规定链接的背景色
 
-8. `<link rel="shortcut icon" href="图片路径" />`添加网页logo，且图片文件类型必须为.ico
+9. `<link rel="shortcut icon" href="图片路径" />`添加网页logo，且图片文件类型必须为.ico
 
-9. 设置边框为圆角：`border-radius:百分比或px;`
+10. 设置边框为圆角：`border-radius:百分比或px;`
 
-10. 表格块可横跨的列数：`colspan='列数'`
+11. 表格块可横跨的列数：`colspan='列数'`
 
    表格块可竖跨的行数：`rowspan='行数'`
 
@@ -165,8 +167,14 @@
     - 
 23. **选择器：**
     -   选择器是一种模式，用于选择需要添加样式的**元素**
-    - 
-24. 
+    - `target`
+24. **动画：**
+    - `animation:绑定动画名 花费秒数 时间曲线 开始前延迟 播放次数 播放形式`
+    - 时间曲线：`linear或ease`
+    - 播放次数：`数值或infinite`
+    - 运行状态：`animation-play-state`
+    - 播放结束后状态：`animation-fill-mode`
+25. 
 +++
 
 > JS:
