@@ -1,0 +1,76 @@
+.choiceBodyA{
+				display: none;
+			}
+			.choiceBodyB{
+				display: inline;
+			}
+			.choiceLogo{
+				box-sizing: border-box;
+				width: 150px;
+				height: 150px;
+				margin: 40px ;
+				border-radius: 50%;
+				position: relative;
+				top: 90px;
+				left: 80px;
+				animation: open 4s ease forwards;
+			}
+			.aniBeChoiced{
+				animation: beChoiced 1s ease forwards;
+			}
+			.aniUnBeChoiced{
+				animation: unBeChoiced 1s ease forwards;
+			}
+			.choiceLogo:hover{
+				border: 2px #00CED1 dotted;
+				transform: scale(1.5);
+			}
+			@keyframes beChoiced{
+				0%{
+					border-color: #00CED1;
+					transform: scale(0);
+				}
+				50%{
+					border: 2px #00CED1 dotted;
+					transform: scale(1.5);
+				}
+				100%{
+					transform:scale(1);
+					border: 4px white dashed;
+					left: 15px;
+					top: -45px;
+					border-width: 10px;
+					border-style: groove;
+				}
+			}
+			@keyframes unBeChoiced{
+				50%{
+					transform: rotate(180deg);
+					opacity: 0.5;
+				}
+				100%{
+					transform: rotate(360deg);
+					opacity: 0;
+					display: none;
+				}
+			}
+			@keyframes open{
+				0%{
+					display: none;
+					transform: scale(0);
+					opacity: 0;
+				}
+				75%{
+					display: inline;
+					transform: scale(0.5);
+					opacity: 0;
+				}
+				87%{
+					opacity: 0.5;
+					transform:rotate(180deg) scale(1.5);
+				}
+				100%{
+					transform: rotate(360deg) scale(1);
+					opacity: 1;
+				}
+			}

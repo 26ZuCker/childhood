@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择页面</title>
+		<script src="../vue.js"></script>
+		<style>
+			.choiceBodyA{
+				/* box-sizing: border-box;
+				margin: 0px auto;
+				position: absolute;
+				top: 80px;
+				left: 150px;
+				width: 1300px;
+				height: 550px; */
+				display: none;
+			}
+			.choiceBodyB{
+				display: inline;
+			}
+			.choiceLogo{
+				box-sizing: border-box;
+				width: 150px;
+				height: 150px;
+				margin: 40px ;
+				border-radius: 50%;
+				position: relative;
+				top: 90px;
+				left: 80px;
+				animation: open 1s ease forwards;
+			}
+			.aniBeChoiced{
+				animation: beChoiced 1s ease forwards;
+			}
+			.aniUnBeChoiced{
+				animation: unBeChoiced 1s ease forwards;
+			}
+			.choiceLogo:hover{
+				border: 2px #00CED1 groove;
+				transform: scale(1.5);
+			}
+			@keyframes beChoiced{
+				0%{
+					border-color: #00CED1;
+					transform: scale(0);
+				}
+				50%{
+					border: 2px #00CED1 dotted;
+					transform: scale(1.5);
+				}
+				100%{
+					transform:scale(1);
+					border: 4px white dashed;
+					left: -20px;
+					top: -35px;
+				}
+			}
+			@keyframes unBeChoiced{
+				50%{
+					transform: rotate(180deg);
+					opacity: 0.5;
+				}
+				100%{
+					transform: rotate(360deg);
+					opacity: 0;
+					display: none;
+				}
+			}
+			@keyframes open{
+				0%{
+					transform: scale(0.5);
+					opacity: 0;
+				}
+				50%{
+					opacity: 0.5;
+					transform:rotate(180deg) scale(1.5);
+				}
+				100%{
+					transform: rotate(360deg) scale(1);
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+	<!-- 获取子元素并组装为数组可简化代码 -->
+	<body>
+		<div id="choiceLogoBar">
+			<button @click="isBegin=!isBegin">改变</button>
+		<div v-if="isBegin">
+			<img src="../NBA/lakers.png" @click="turnTop"
+			:class="{aniBeChoiced:isAni,aniUnBeChoiced:isnotAni,choiceLogo:isLogo}"/>
+			
+			<img src="../NBA/celtics.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/clippers.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/76ers.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/bucks.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/pacers.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/heat.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/jazz.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/maverichs.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/nuggest.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/raptors.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+			<img src="../NBA/rocket.png" @click="turnTop"
+			:class="{aniBeChoiced:isnotAni,aniUnBeChoiced:isAni,choiceLogo:isLogo}"/>
+		</div>
+		</div>
+		<script>
+			var counter=1;
+			var vm=new Vue({
+				el:"#choiceLogoBar",
+				data:{
+					isAni:false,isLogo:true,isnotAni:false,isOn:false,
+					isBegin:false,
+				},
+				methods:{
+					turnTop:function(){
+						if(counter===1){
+							this.isAni=!this.isAni;
+							counter++;
+						}
+						// document.getElementById("choiceLogoBar").style.display="none";
+					},
+					turnOn:function(){
+						this.isOn=!this.isOn
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

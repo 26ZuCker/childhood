@@ -1,0 +1,123 @@
+@keyframes smallAB{
+				0%{
+					transform: scale(0.0);
+					opacity: 0;
+				}
+				50%{
+					transform: scale(0.0) translateY(-200px);
+					opacity: 0;
+				}
+				75%{
+					transform: scale(1) translateY(100px);
+					opacity: 0.4;
+				}
+				90%{
+					transform: scale(1.1) translateY(100px);
+					opacity: 0.8;
+				}
+				100%{
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+			@keyframes smallC{
+				0%{
+					transform: scale(0.0);
+					height: 0px;
+				}
+				50%{
+					transform: scale(0.0);
+					opacity: 0;
+					height: 0px;
+				}
+				90%{
+					opacity: 0.9;
+					transform: scale(1);
+					height: 0px;
+				}
+				100%{
+					opacity: 1;
+					transform: scale(1);
+					height: 530px;
+				}
+			}
+			.aniSmallAB{
+				animation: smallAB 4s ease forwards;
+			}
+			.aniSmallC{
+				animation: smallC 4s ease forwards;
+			}
+			.matchLogo:hover{
+				transform: scale(1.2);
+				border-color: #00CED1;
+				border-style: dotted;
+			}
+			.bigBody{
+				box-sizing: border-box;
+				/* border: 2px double #24AECD;
+				background-color: #96C2F1; */
+				position: absolute;
+				top: 160px;
+				left: 300px;
+				width: 1200px;
+				height: 550px;
+				display: inline;
+				/
+			}
+			.smallBody1{
+				box-sizing: border-box;
+				/* border: 2px double #24AECD;
+				border-radius: 5%;
+				background-color: #eaea00; */
+				width: 700px;
+				height: 250px;
+				position: relative;
+				top: 5px;
+				left: 5px;
+				background-color: #87CEEB;
+			}
+			.smallBody2{
+				box-sizing: border-box;
+				/* border: 2px double #24AECD;
+				background-color: #00aa00;
+				border-radius: 5%; */
+				width: 700px;
+				height: 250px;
+				position: relative;
+				top: 40px;
+				left: 5px;
+				background-color: #96C2F1;
+			}
+			.smallBody3{
+				box-sizing: border-box;
+				border: 2px double #24AECD;
+				border-top-left-radius: 8%;
+				border-bottom-left-radius: 8%;
+				background-color: #66b1c8;
+				width: 450px;
+				height: 530px;
+				position: relative;
+				left: 745px;
+				top: -490px;
+				overflow: scroll;
+				overflow-x: hidden;
+			}
+			.matchLogo{
+				box-sizing: border-box;
+				border: 2px #19C1C0 dashed;
+				border-radius: 50%;
+				width: 80px;
+				height: 80px;
+				transition: all 0.5s ease;
+			}
+			table{
+				width: 700px;
+				height: 250px;
+				text-align: center;
+				font-size: 15px;
+				font-weight: 800;
+			}
+			td{
+				width: 200px;
+				border: 1px #000000 solid;
+			}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>进入页面</title>
+		<script src="../vue.js"></script>
+		<style>
+			@keyframes openingBody{
+				0%{
+					transform: translateX(0px)
+				}
+				100%{
+					transform: translateX(-560px);
+				}
+			}
+			@keyframes  openingWord{
+				100%{
+					transform: rotateX(360deg) rotate(360deg);
+					/* transform: rotate(45deg); */
+				}
+			}
+			@keyframes clickBody{
+				50%{
+					opacity: 1;
+				}
+				100%{
+					transform: translate(0px,-800px);
+					display: none;
+				}
+			}
+			@keyframes clickWord{
+				100%{
+					opacity: 0.1;
+					left: -500px;
+					display: none;
+				}
+			}
+			.aniOpeningBody{
+				animation: openingBody 2s linear infinite;
+			}
+			.aniOpeningWord{
+				animation: openingWord 2s linear infinite;
+				perspective: 200px;
+			}
+			.aniClickBody{
+				animation: clickBody 2.5s ease forwards;
+			}
+			.aniClickWord{
+				animation: clickWord 3s ease forwards;
+			}
+			.body{
+				box-sizing: border-box;
+				width: 2560px;
+				height: 740px;
+				opacity: 0.3;
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				display: inline;
+			}
+			.word{
+				position: absolute;
+				top: 280px;
+				left: 550px;
+				font-size: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="open" @click="opening">
+			<div><img :class="{body:always,aniClickBody:isBody,aniOpeningBody:isOpen}"
+			src="../别墅背景.jpg"/></div>
+			<div :class="{word:always,aniClickWord:isWord,aniOpeningWord:isOpen}">Welcome</div>
+		</div>
+		<script>
+			var vm=new Vue({
+				el:"#open",
+				data:{
+					always:true,
+					isBody:false,
+					isWord:false,
+					isOpen:true
+				},
+				methods:{
+					opening:function(){
+						this.isBody=!this.isBody;
+						this.isWord=!this.isWord;
+						this.isOpen=!this.isOpen;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

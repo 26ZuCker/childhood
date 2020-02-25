@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>顶部栏</title>
+		<script src="../vue.js"></script>
+		<style>
+			a:link,a:visited
+			{
+				color: #000000;
+				text-decoration:none;
+				color: #EFF7FF;
+			}
+			.topBar{
+				box-sizing: border-box;
+				border: 1px #668899 solid;
+				background-color: #52585b;
+				width: 1200px;
+				height: 150px;
+				position: relative;
+				left: 310px;
+			}
+			 .menu1{
+				box-sizing: border-box;
+				border: 1px salmon solid;
+				width: 200px;
+				height: 42px;
+				text-align: center;
+				font-size: 25px;
+				position: absolute;
+				top: 50px;
+				left: 530px;
+				overflow:hidden ;
+				transition: height 1s; 
+				color: #EFF7FF;
+			}
+			.menu2{
+				box-sizing: border-box;
+				border: 1px skyblue solid;
+				width: 200px;
+				height: 42px;
+				text-align: center;
+				font-size: 25px;
+				position: absolute;
+				top: 50px;
+				left: 750px;
+				overflow:hidden ;
+				transition: height 1s;
+				color: #EFF7FF;
+			}
+			.menu3{
+				box-sizing: border-box;
+				border: 1px salmon solid;
+				width: 200px;
+				height: 42px;
+				text-align: center;
+				font-size: 25px;
+				position: absolute;
+				top: 50px;
+				left: 970px;
+				overflow:hidden ;
+				transition: height 1s;
+				color: #EFF7FF;
+			}
+			.menu1:hover{
+				height: 180px;
+			}
+			.menu2:hover{
+				height: 140px;
+			}
+			.menu3:hover{
+				height: 220px;
+			}
+		</style>
+	</head>
+	<body>
+		<div :class="{topBar:always,}" id="idTopBar">
+			<div :class="{menu1:always,}">
+				<div>常规赛</div>
+				<div>^</div>
+				<div><a href="">10~12</a></div>
+				<div><a href="">12~2</a></div>
+				<div><a href="">2~4</a></div>
+			</div>
+			<div :class="{menu2:always,}">
+				<div>全明星</div>
+				<div>^</div>
+				<div><a href="">单项</a></div>
+				<div><a href="">正赛</a></div>
+			</div>
+			<div :class="{menu3:always,}">
+				<div>季后赛</div>
+				<div>^</div>
+				<div><a href="">首轮</a></div>
+				<div><a href="">次轮</a></div>
+				<div><a href="">东西决</a></div>
+				<div><a href="" @click="isShowFinal=!isShowFinal">总决赛</a></div>
+			</div>
+		</div>
+		<script>
+			var vm=new Vue({
+				el:"#idTopBar",
+				data:{
+					always:true,isShowFinal:false,
+					
+				},
+				methods:{
+					
+				}
+			})
+		</script>
+	</body>
+</html>
