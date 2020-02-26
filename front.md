@@ -1,8 +1,8 @@
 - 学习路线：HTML+CSS+JS
 
-  VUE+NODE+AJAX
+  VUE+BOOTSTRAP+AJAX+移动WEB开发
 
-  PHP+BOOTSTRAP+移动WEB开发
+  PHP+NODE
   
   ![前端路线](C:\Users\16404\Desktop\前端路线.jpg)
 
@@ -15,26 +15,28 @@
 
 > **HTML:**
 
-1. `input`的type属性如下
+1. input的type属性如下：
 
    `range` 显示为滑动条控制输出数字大小，您还能够设定对所接受的数字的限定
 
    `<input type="range" name="points" min="1" max="10" />`
 
-   `date` 选取日、月、年 
+   `date` 选取日、月、年
 
-   `month` 选取月、年 
+   `month` 选取月、年
 
    `week` 选取周和年
 
    `color`选取颜色
 
-2. **canvas:**
+2. canvas:
 
    -  `<canvas id width height>`HTML只是规定id和尺寸
    - 绘制工作在JS内完成：先寻找该元素>再创建对象`变量=该元素.getContext("2d")`>进行绘制`变量.属性`
    
-3. 
+3. 鼠标悬停显示信息：`<标签 title='信息'>`
+
+4. 
 
 +++
 
@@ -55,44 +57,6 @@
              test.style.width = '100px';
          },3000);
      }
-     ```
-
-   - **点击触发动画：**设置element.style.animationPlayState
-
-     ```javascript
-     <style>
-     		@keyframes wlk{
-     			100%{
-     				left: 300px;
-     				background-color: blue;
-     				transform: rotate(45deg);
-     			}
-     		}
-     		.transi1{
-     			position: absolute;
-     			top: 60px;
-     			left:10px;
-     			width: 200px;
-     			height: 200px;
-     			background-color: red;
-     		}
-     		.transi2{
-     			animation: wlk 2s;
-     			animation-fill-mode: forwards;
-     		}
-     	</style>
-     </head>
-     <body>
-      <button>执行动画</button>
-      <div id="di1" class="transi1">第二个过渡动画</div>
-      
-      <script>
-      	var btn  = document.getElementsByTagName("button")[0];
-     btn.addEventListener("click",function(){
-     var di = document.getElementById("di1");
-     di.setAttribute("class","transi1 transi2");
-      	});
-      </script>
      ```
 
    - 过渡只有一组（开始-结束），动画则多组，相当于多个过渡
@@ -118,7 +82,7 @@
 
 8. `background-color`规定链接的背景色
 
-9. `<link rel="shortcut icon" href="图片路径" />`添加网页logo，且图片文件类型必须为.ico
+9. 添加网页logo：`<link rel="shortcut icon" href="图片路径" />`且图片文件类型必须为.ico
 
 10. 设置边框为圆角：`border-radius:百分比或px;`
 
@@ -174,7 +138,16 @@
     - 播放次数：`数值或infinite`
     - 运行状态：`animation-play-state`
     - 播放结束后状态：`animation-fill-mode`
-25. 
+    - 延时进入动画：`animation-delay`
+25. 边框：
+    -   `border:宽度，样式，颜色`   
+    - 样式：dotted点，dashed虚线，solid实线，double双线，3D效果groove，ridge，inset，outse
+26. `z-index`不生效情况：
+    - 父元素 position属性为relative
+    - 目的元素无position属性（不包括static）
+    - 目的元素含有浮动(float)属性
+    - 总之一般都添加`position`即可，且父元素优先为`absoluted`
+27. 
 +++
 
 > JS:
@@ -249,19 +222,40 @@
 
       `var x = document.querySelectorAll("p.intro");`返回 class="intro" 的所有 <p> 元素列表
 
-   2. 
+   2. 可修改的style属性只有部分，参考https://www.w3school.com.cn/js/js_htmldom_css.asp
 
-5. 事件：
+   3. **设置事件监听器：**
+
+      - `element.addEventListener(event, function, 布尔值);`
+      - 最后的布尔值默认为false，为冒泡传播（最内侧元素的事件会首先被处理，然后是更外侧的），为true则为捕获传播
+
+   4. 捕获元素集合：
+
+      -   `var a=document.getElementsByTagName("p");`
+      - 之后通过`a[索引]`对具体元素进行操作
+      - a不能用数组的方法
+
+   5. 
+
+5. **事件**(VUE：https://developer.mozilla.org/zh-CN/docs/Web/Events
+   
+   JS：https://www.w3school.com.cn/jsref/dom_obj_event.asp)
+   
+   **以下为VUE**(不同于JS，一般省略on)：
    
    1.   鼠标：
-        1.   onclick
-        2.   onmousedown
-        3.   onmousemove
-        4.   onmouseout
-        5.   onmouseover
-        6.   onmouseup   
-   2.   
+        1.   click：点击（按下+松开）
+        2.   dblclick：双击
+        3.   mousedown：按下
+        4.   onmousemove：移动
+        5.   onmouseout：移出，或移到其子元素上
+        6.   onmouseup：松开
+   2.   首末标签内的内容发生改变：change
+   3.   CSS动画：
+        - animationstart：某个动画开始时触发
    
-6. **鼠标悬停显示坐标**
+6. 鼠标悬停显示坐标：
 
-7. 
+7. **CSS属性**转换为JS属性：去掉-，并改为驼峰写法，即首字母大写代替-
+
+8. 
