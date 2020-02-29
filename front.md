@@ -15,7 +15,9 @@
 
 > **HTML:**
 
-1. input的type属性如下：
+1. **用分隔线命名法：`her-husband`**
+
+2. input的type属性如下：
 
    `range` 显示为滑动条控制输出数字大小，您还能够设定对所接受的数字的限定
 
@@ -29,14 +31,25 @@
 
    `color`选取颜色
 
-2. canvas:
+3. canvas:
 
    -  `<canvas id width height>`HTML只是规定id和尺寸
    - 绘制工作在JS内完成：先寻找该元素>再创建对象`变量=该元素.getContext("2d")`>进行绘制`变量.属性`
-   
-3. 鼠标悬停显示信息：`<标签 title='信息'>`
 
-4. 
+4. 鼠标悬停显示信息：`<标签 title='信息'>`
+
+5. **表单:**
+
+   1. 预定义文本（浅色，可直接输入）：`placeholder`
+   2. 选择栏提前选中：`checked='checked'`
+   3. 更新网页或点击`submit`必须进行操作的表单：`required='required'`
+   4. 不可进行操作的表单：`disabled`
+   5. `value`显示深色，可直接编辑，不可直接输入：
+      - `button或reset或submit`定义按钮上的显示的文本
+      - `text或password或hidden`定义输入字段的初始值
+      - `checkbox或radio或image`定义与输入相关联的值
+
+6. 
 
 +++
 

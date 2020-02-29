@@ -1,3 +1,5 @@
+> AJAX:
+
 1. 初始化：
 
    ```javascript
@@ -33,9 +35,11 @@
 
 3. **流程：**事件触发>判断函数>若出现有效数据，执行初始化>将获取的数据赋值给目的标签
 
-4. 触发事件一般是`onchange`
+4. 触发事件一般是`onchange`某些内容发生改变
 
-5. 获取信息的方式:
+5. 
+
+6. 获取信息的方式:
 
    - 获取头部：
 
@@ -44,18 +48,45 @@
 
    - 获取所有：
 
-     1. 字符串：`document.getElementById("myDiv").innerHTML=xmlhttp.responseText;`
+     1. 文本：`document.getElementById("myDiv").innerHTML=xmlhttp.responseText;`
 
-     2. 文本：
+     2. 可解析：
 
-        ```javascript
+        ```javascript·
         xmlDoc=xmlhttp.responseXML;
-            txt="";
+        txt="";
           x=xmlDoc.getElementsByTagName("title");
             for (i=0;i<x.length;i++)
               {
               txt=txt + x[i].childNodes[0].nodeValue + "<br />";
               }
-         document.getElementById("myDiv").innerHTML=txt;
+         document.getElementById("myDiv").innerHTML=txt;.
         ```
 
+> PHP:
+
+1. PHP 脚本在服务器上执行，然后向浏览器发送回纯 HTML 结果，PHP 脚本可放置于文档中的任何位置`<?php PHP语句 ?>`
+
+2. PHP 语句以分号结尾（;）
+
+3. 变量以 $ 符号开头
+
+4. PHP 有三种不同的变量作用域：
+
+   - local：函数内声明，外则无法使用
+
+   - global：函数外声明，内也无法使用，需用`global $变量`声明，
+
+     `$GLOBALS[索引] `数组中存储了所有的全局变量
+
+   - static：函数内为局部变量声明，每当函数被调用时，这个变量所存储的信息都是函数最后一次被调用时所包含的信息  
+
+5. 字符串中能包含 HTML 标签，其中的变量为`{$变量}`
+
+6. 数据类型：
+
+   1. 字符串、整数、浮点数、逻辑（布尔）、数组（`$变量=array(,)`）、对象、NULL
+   2. `var_dump($变量) `会输出变量的数据类型和值
+   3. 
+
+7. 

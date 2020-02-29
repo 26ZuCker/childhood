@@ -55,7 +55,7 @@
 3. `git config --global color.ui true`适当地显示不同的颜色
 4. `git init 目录名`把该目录变为git可管理的本地仓库
 5. `git commit -m "自己备注的信息"`最终提交修改
-6. `git add -A `添加全部文件
+6. `git add -A `添加全部文件`git add 名1 名2`添加多个文件
 7. `git push`提交当前分支到远程仓库（第二次及之后）
 8. `git remote add origin git@github.com:michaelliao/learngit.git`需要在本地的learngit目录下进行，与michaelliao账户内的learngit关联
 9. `git clone git@github.com:michaelliao/gitskills.git`将michaelliao账户的GitHub内的gitskills仓库克隆到本地
